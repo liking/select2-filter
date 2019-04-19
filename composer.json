@@ -7,6 +7,7 @@
         "nova",
         "select2 filter"
     ],
+    "type": "Nova Custom Filter",
     "authors": [
         {
             "name": "liking",
@@ -26,28 +27,7 @@
             ]
         }
     },
-    "repositories": [
-        {
-            "type": "package",
-            "package": {
-                "name": "vue-select",
-                "version": "^3.0.2",
-                "type": "package",
-                "source": {
-                    "type": "git",
-                    "reference": "3.0.2",
-                    "url": "https://github.com/sagalbot/vue-select"
-                }
-            }
-        }
-    ],
-    "require": {},
-    "scripts": {
-        "post-install-cmd": [
-            "bower install"
-        ],
-        "post-update-cmd": [
-            "bower install"
-        ]
+    "require": {
+        "php": ">=7.1.0"
     }
 }
