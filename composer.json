@@ -1,0 +1,30 @@
+{
+    "name": "liking/select2-filter",
+    "description": "Nova Select2 Filter",
+    "keywords": [
+        "laravel",
+        "nova",
+        "select2 filter"
+    ],
+    "authors": [
+        {
+            "name": "liking",
+            "email": "m.linhking@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Liking\\Select2Filter\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Liking\\Select2Filter\\FilterServiceProvider"
+            ]
+        }
+    },
+    "require": {},
+    "license": "MIT"
+}
