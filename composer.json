@@ -1,6 +1,7 @@
 {
     "name": "liking/select2-filter",
     "description": "Nova Select2 Filter",
+    "license": "MIT",
     "keywords": [
         "laravel",
         "nova",
@@ -25,6 +26,28 @@
             ]
         }
     },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "vue-select",
+                "version": "^3.0.2",
+                "type": "package",
+                "source": {
+                    "type": "git",
+                    "reference": "3.0.2",
+                    "url": "https://github.com/sagalbot/vue-select"
+                }
+            }
+        }
+    ],
     "require": {},
-    "license": "MIT"
+    "scripts": {
+        "post-install-cmd": [
+            "bower install"
+        ],
+        "post-update-cmd": [
+            "bower install"
+        ]
+    }
 }
