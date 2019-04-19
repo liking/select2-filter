@@ -7,7 +7,6 @@
         "nova",
         "select2 filter"
     ],
-    "type": "Nova Custom Filter",
     "authors": [
         {
             "name": "liking",
