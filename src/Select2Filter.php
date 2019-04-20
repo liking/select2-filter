@@ -2,7 +2,6 @@
 
 namespace Liking\Select2Filter;
 
-use Illuminate\Container\Container;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Laravel\Nova\Filters\Filter;
@@ -25,12 +24,21 @@ class Select2Filter extends Filter
      */
     public $filterId = 'id';
 
+    /**
+     * Name of Nova Resource to search
+     * If not config, user current Resource
+     *
+     * @var string
+     */
+    public $filterResource = '';
+
 
     public function meta()
     {
         return array_merge([
             'filterId' => $this->filterId,
             'filterTitle' => $this->filterTitle,
+            'filterResource' => $this->filterResource
         ], $this->meta);
     }
 

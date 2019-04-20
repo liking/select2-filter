@@ -47,7 +47,7 @@
             search: _.debounce((loading, search, vm) => {
                 let options = []
 
-                Nova.request().get('/nova-api/' + vm.resourceName, {
+                Nova.request().get('/nova-api/' + vm.searchResource, {
                     params: {search},
                 }).then(({data}) => {
                     let resources = data.resources
@@ -78,7 +78,6 @@
                 return option
             }
         },
-
         computed: {
             filter() {
                 return this.$store.getters[`${this.resourceName}/getFilter`](this.filterKey)
@@ -94,6 +93,9 @@
             },
             id() {
                 return this.filter.filterId
+            },
+            searchResource() {
+                return this.filter.filterResource !== '' ? this.filter.filterResource : this.resourceName
             }
         },
     }

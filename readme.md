@@ -36,6 +36,14 @@ class CustomFilter extends Select2Filter
      */
     public $filterId = 'id';
     
+    /**
+     * Name of Nova Resource to search
+     * If not config, user current Resource
+     *
+     * @var string
+     */
+    public $filterResource = '';
+    
     ....
 ```
 
